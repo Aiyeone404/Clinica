@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos</title>
+    <link rel="stylesheet" href="clinica.css">
+    <!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <style>
+body{
+    background-image: url('/Frontend/img/Flux_Dev_estou_desenvolvendo_um_site_para_clinica_quero_usar_n_2.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height:auto; 
+    width:100%;
+    margin:0;
+    padding:0;
+}
+    </style>
+    <h1 class="titulo">BellaDente <img src="/Frontend/img/dente.png" alt="dente-icon"></h1>
+    <nav id="box-nav"> 
+        <div id="nav">
+            <a href="/Frontend/Clinica.html"><span>inicio<img src="/Frontend/img/botao-de-inicio.png" alt="Home"></span></a>
+            <a href="/Frontend/agendamento.html"><span>agendamentos <img src="/Frontend/img/calendario.png" alt="agendamentos"></span></a>
+            <a href=""><span>Contatos <img src="/Frontend/img/telefone.png" alt="Contato"></span></a>
+            <a href=""><span>Sobre Nos</span></a>
+        </div>
+    </nav>
+    <header id="agen">
+        <div id="box-agendamento">
+            <form action="" id="dados-agendamento">
+               <p>NOME:<input type="text" id="nome"class="input-dados" placeholder="digite seu nome"></p>
+                <p>IDADE:<input type="number" name="idade" id="idade" class="input-dados" placeholder="idade" max="100"></p>
+                <p>PHONE:<input type="tel" name="phone" id="phone" class="input-dados" placeholder="telefone"></p>
+                <div id="calendario"></div>
+                <input type="button" value="AGENDAR" id="agendar">
+            </form>
+        </div>
+    </header>
+    <script>
+  flatpickr("#calendario", {
+    inline: true,
+    dateFormat: "Y-m-d",
+    defaultDate: "2025-01-01",        
+     minDate: "2025-01-01",
+     maxDate: "2025-12-31",
+    locale: "pt",
+  });
+</script>
+<script src="/Backend/index.js"></script>
+</body>
+</html>
